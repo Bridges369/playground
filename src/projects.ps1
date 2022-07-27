@@ -15,12 +15,15 @@ function Add-Project {
   )
 
   begin {
+    #
   }
 
   process {
+    #
   }
 
   end {
+    #
   }
 }
 
