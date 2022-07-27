@@ -30,7 +30,9 @@ Get-Project <MODE> [PROJECT_NAME | PATH]
 
 # TODO
 
-- [ ] project: add a new project
+- [x] project: add a new simple project
+- [ ] project: ... with framework
+- [ ] project: ... with extension
 - [ ] project: manage projects
 - [ ] project: mode `a`
 - [ ] project: mode `s`
