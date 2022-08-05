@@ -29,6 +29,16 @@ if ($framework -ne "") {
     }
   }
 } 
+elseif ($extension -ne "") {
+  try {
+    New-Item "$path/$name" -ItemType Directory -ErrorAction Stop
+  } catch {
+    Write-Error "The project '$name' already exist"
+    exit
+  }
+  New-Item "$path/$name/main.$extension" -ItemType File
+  Set-Location "$path/$name"
+}
 else {
   try {
     New-Item "$path/$name" -ItemType Directory -ErrorAction Stop
