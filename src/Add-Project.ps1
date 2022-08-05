@@ -28,8 +28,7 @@ if ($framework -ne "") {
       exit
     }
   }
-} 
-elseif ($extension -ne "") {
+} elseif ($extension -ne "") {
   try {
     New-Item "$path/$name" -ItemType Directory -ErrorAction Stop
   } catch {
@@ -38,8 +37,7 @@ elseif ($extension -ne "") {
   }
   New-Item "$path/$name/main.$extension" -ItemType File
   Set-Location "$path/$name"
-}
-else {
+} else {
   try {
     New-Item "$path/$name" -ItemType Directory -ErrorAction Stop
   } catch {
