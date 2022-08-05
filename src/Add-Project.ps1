@@ -17,8 +17,23 @@ param (
 )
 
 $path = ((Get-Content "$PSScriptRoot/../.config") -split ":")[1]
-try {
-  New-Item "$path/$name" -ItemType Directory 
-} catch {
-  Write-Error "The project '$name' already exist"    
+
+if ($framework -ne "") {
+  switch ( $framework ){
+    "rust" {
+      cargo new $name $params
+    }
+    default { 
+      Write-Error "This framework doesn't seem to be installed."
+      exit
+    }
+  }
+} 
+else {
+  try {
+    New-Item "$path/$name" -ItemType Directory -ErrorAction Stop
+  } catch {
+    Write-Error "The project '$name' already exist"
+    exit
+  }
 }
