@@ -5,12 +5,15 @@ param (
   [string]$name="",
 
   [Parameter(Mandatory=$false)]
-  [ValidateSet("null")]
+  #[ValidateSet("null")]
   [string]$framework,
 
   [Parameter(Mandatory=$false)]
-  [ValidateSet("null")]
-  [string]$extension
+  #[ValidateSet("null")]
+  [string]$extension,
+
+  [Parameter(Mandatory=$false)]
+  [string]$params
 )
 
 $path = ((Get-Content "$PSScriptRoot/../.config") -split ":")[1]
