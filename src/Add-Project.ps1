@@ -48,16 +48,16 @@ if ($Framework) {
   }
 } elseif ($Extension) {
   try {
-    New-Item "$path/$Name" -ItemType Directory -ErrorAction Stop
+    New-Ite -Path $path -Name $Name -ItemType Directory -ErrorAction Stop
   } catch {
     Write-Error "The project '$Name' already exist"
     exit
   }
-  New-Item "$path/$Name/main.$Extension" -ItemType File
+  New-Item -Path $path -Name "$Name/main.$Extension" -ItemType File
   Set-Location "$path/$Name"
 } else {
   try {
-    New-Item "$path/$Name" -ItemType Directory -ErrorAction Stop
+    New-Item -Path $path -Name $Name -ItemType Directory -ErrorAction Stop
   } catch {
     Write-Error "The project '$Name' already exist"
     exit
