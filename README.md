@@ -16,9 +16,13 @@ Get-Project <MODE> [PROJECT_NAME | PATH]
 
 ```
 1. a      List all projects
+            ==> List the name of the all projects.
 2. s      Set location to Project
+            ==> Goes to the specified project directory.
 3. c      Set path to projects
-5. m      Migrate projects from old path to new path
+            ==> Set the path to the projects directory.
+4. m      Create a new project from the current directory.
+            ==> The current directory turns into a new project and is moved to projects directory.
 ```
 
 ## New Test
