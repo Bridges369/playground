@@ -38,7 +38,7 @@ $path = ((Get-Content "$PSScriptRoot/../.config") -split ":")[1]
 
 function create() {
   try {
-    New-Ite -Path $path -Name $Name -ItemType Directory -ErrorAction Stop
+    New-Item -Path $path -Name $Name -ItemType Directory -ErrorAction Stop
   } catch {
     Write-Error "The project '$Name' already exist"
     exit
@@ -57,7 +57,7 @@ if ($Framework) {
   }
 } elseif ($Extension) {
   try {
-    New-Ite -Path $path -Name $Name -ItemType Directory -ErrorAction Stop
+    New-Item -Path $path -Name $Name -ItemType Directory -ErrorAction Stop
   } catch {
     Write-Error "The project '$Name' already exist"
     exit

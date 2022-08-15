@@ -27,6 +27,10 @@ Get-Project <MODE> [PROJECT_NAME | PATH]
 
 ## New Test
 
+```PowerShell
+Add-Test <NAME> [-config-path <PATH>]
+```
+
 ## Return path before test
 
 --

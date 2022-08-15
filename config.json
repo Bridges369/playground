@@ -1,0 +1,8 @@
+{
+  "Projects": {
+    "Path":"~/Projects"
+  },
+  "Tests":{
+    "Path": "~/Tests"
+  }
+}
